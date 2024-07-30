@@ -14,7 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <MainContainer />
+        <MainContainer>
+          Landing page/Search
+        </MainContainer>
       </main>
     </>
   );
