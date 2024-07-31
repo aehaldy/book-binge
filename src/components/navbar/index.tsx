@@ -9,7 +9,7 @@ export default function Navbar() {
     <ul>
       <li><Navlink displayText={"Search"} linkPath={"/"}/></li>
       <li><Navlink displayText={"Want to read"} linkPath={"want-to-read"} /></li>
-      <li><Navlink displayText={"Finished"} linkPath={"finished"} /></li>
+      <li><Navlink displayText={"Finished reading"} linkPath={"finished"} /></li>
     </ul>
   </div>)
 }
