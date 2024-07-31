@@ -4,9 +4,16 @@ Start with a near-empty React (Next.js) project and end with a book search and l
 
 ## Prerequisites
 
-You should have a basic grasp of the foundational concepts presented in **React**’s first two _Learn React_ chapters: [Describing the UI](https://react.dev/learn/describing-the-ui) and [Adding Interactivity](https://react.dev/learn/adding-interactivity).
+You should have a basic grasp of JavaScript/TypeScript, and of the foundational concepts presented in **React**’s first two _Learn React_ chapters: [Describing the UI](https://react.dev/learn/describing-the-ui) and [Adding Interactivity](https://react.dev/learn/adding-interactivity).
 
 Start with _Your First Component_ and work through _Updating Arrays in State_ (16 lessons total). Review these concepts to get the most out of this curriculum, and feel free to skip areas you’re already familiar with.
+
+### Additional resources
+
+[JavaScript flash review](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet) (5 min read)  
+[Typescript from a C# perspective](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html)(5-10 min read)  
+And remember, the [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) are your friend!
+
 
 ## Getting Started
 
