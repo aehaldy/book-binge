@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+$phone-max: 766px;
+$tablet-min: 767px;
+$desktop-min: 1239px;
+
 :root {
   --alert-purple: #865CFF;
   --bright-teal: #0A838C;
@@ -13,20 +17,20 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   margin: 0;
   box-sizing: border-box;
 
   h1 {
     color: var(--prussian-blue);
-    font-family: "Bitter", serif;
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
   }
 
   h2 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Bitter", serif;
     font-size: 2rem;
     font-variant: all-small-caps;
     font-weight: bold;
