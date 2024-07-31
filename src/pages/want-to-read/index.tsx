@@ -5,7 +5,7 @@ export default function WantToRead() {
   return (
     <MainContainer>
       <PageContainer title={"Want to read"}>
-        Want to reading list
+        Reading list
       </PageContainer>
     </MainContainer>
   );

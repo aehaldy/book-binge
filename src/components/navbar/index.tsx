@@ -6,9 +6,10 @@ export default function Navbar() {
     <Link href={"/"}>
       Book Binge
     </Link>
-    <div>
-      <Navlink displayText={"Want to read"} linkPath={"want-to-read"} />
-      <Navlink displayText={"Finished"} linkPath={"finished"} />
-    </div>
+    <ul>
+      <li><Navlink displayText={"Search"} linkPath={"/"}/></li>
+      <li><Navlink displayText={"Want to read"} linkPath={"want-to-read"} /></li>
+      <li><Navlink displayText={"Finished"} linkPath={"finished"} /></li>
+    </ul>
   </div>)
 }
