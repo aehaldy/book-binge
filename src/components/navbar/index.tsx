@@ -7,8 +7,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 export default function Navbar() {
   return(<div className={styles.navbar}>
     <div>
-      <FontAwesomeIcon icon={faBookOpen} className={styles.icon} />
       <Link href={"/"} className={styles.appName}>
+        <FontAwesomeIcon icon={faBookOpen} className={styles.icon} />
         Book Binge
       </Link>
     </div>
