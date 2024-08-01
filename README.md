@@ -10,7 +10,7 @@ Start with _Your First Component_ and work through _Updating Arrays in State_ (1
 
 ### Additional resources
 
-[JavaScript flash review](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet) (5 min read)  
+[JavaScript syntax cheatsheet](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet) (5 min read)  
 [Typescript from a C# perspective](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html)(5-10 min read)  
 And remember, the [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) are your friend!
 
