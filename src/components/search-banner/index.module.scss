@@ -1,0 +1,14 @@
+@import "../../variables.scss";
+
+.searchBanner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.825rem;
+  background: var(--prussian-blue);
+
+  .searchBarContainer {
+    width: 100%;
+    max-width: 794px;
+  }
+}
