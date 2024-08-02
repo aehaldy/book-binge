@@ -1,25 +1,43 @@
 import Navbar from "@/components/navbar";
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren, useEffect, useState, useCallback } from "react";
 import SearchBanner from "../search-banner";
 import LandingPage from "@/components/landing-page";
 import { SearchResult } from "@/services/models/searchResult";
 import PageContainer from "@/components/page-container";
 import SearchResults from "@/components/search-results";
+import { useRouter } from "next/router";
+import { getSearchResults } from "@/services/openLibraryService";
 
-export default function MainContainer({children}: PropsWithChildren) {
-  const [ searchResults, setSearchResults ] = useState<SearchResult[]>([]);
+export default function MainContainer({ children }: PropsWithChildren) {
+  const { query } = useRouter();
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  
+  const fetchSearchResults = useCallback(async (query: string) => {
+    try {
+      const response = await getSearchResults(query);
+      setSearchResults(response.data.docs);
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (Object.keys(query).length) {
+      fetchSearchResults(query.query as string);
+    } else {
+      setSearchResults([]);
+    }
+  }, [fetchSearchResults, query]);
 
   const renderHomePage = () => searchResults?.length
     ? (<PageContainer title={"Search results"}>
-        <SearchResults searchResults={searchResults} />
-      </PageContainer>)
+         <SearchResults searchResults={searchResults} />
+       </PageContainer>)
     : <LandingPage />;
 
-  return (
-    <>
-      <Navbar/>
-      <SearchBanner setSearchResults={setSearchResults}/>
-      { children ? children : renderHomePage()}
-    </>
-  );
+  return (<>
+    <Navbar />
+    <SearchBanner />
+    {children ? children : renderHomePage()}
+  </>);
 }

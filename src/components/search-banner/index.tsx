@@ -1,20 +1,12 @@
 import styles from './index.module.scss';
 import SearchBar from "@/ui-library/search-bar";
-import { getSearchResults } from "@/services/openLibraryService";
-import { SearchResult } from "@/services/models/searchResult";
+import { useRouter } from "next/router";
 
-type SearchBannerProps = {
-  setSearchResults: (results: SearchResult[]) => void;
-};
+export default function SearchBanner() {
+  const { push } = useRouter();
 
-export default function SearchBanner({setSearchResults}: SearchBannerProps) {
   const searchCallback = async (query: string) => {
-    try {
-      const response = await getSearchResults(query)
-       setSearchResults(response.data.docs);
-    } catch (error) {
-      console.error(error);
-    }
+    await push(`/?query=${query}`, undefined, { shallow: true })
   };
 
   return(<div className={styles.searchBanner}>
