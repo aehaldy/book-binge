@@ -47,7 +47,7 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 ### Figma Designs
 To simulate working with a design team, this project comes with a Figma design. You can view the design by uploading the Figma file (BookBinge.fig) to your Figma account (a free account is sufficient). You will need to use Figma to inspect the design and ascertain style choices such as fonts and colors.
 
-The project is already loaded with all necessary fonts and color variables so that you can focus on coding. You'll find the full list of color variable names and media breakpoints in the global.scss file.
+The project is already loaded with all necessary fonts and color variables so that you can focus on coding. You'll find the full list of color variable names in the global.scss file and media breakpoints in the _variables.scss file.
 
 ### UI Components
 To simulate using 3rd-party or in-house UI libraries, this project comes with a small UI library you must leverage during development. You can see the available components by navigating to [http://localhost:4000/ui-libary](http://localhost:4000/ui-library).
