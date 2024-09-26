@@ -1,8 +1,11 @@
 import styles from './index.module.scss';
 import SearchBar from "@/ui-library/search-bar";
 import { useRouter } from "next/router";
+import { useIntl } from "react-intl";
+import messages from "./messages";
 
 export default function SearchBanner() {
+  const { formatMessage } = useIntl();
   const { push } = useRouter();
 
   const searchCallback = async (query: string) => {
@@ -13,7 +16,7 @@ export default function SearchBanner() {
     <div className={styles.searchBarContainer}>
       <SearchBar
         onSearchCallback={searchCallback}
-        placeholderText={"Search for a book by title, author, or keyword..."}
+        placeholderText={formatMessage(messages.placeholderText)}
       />
     </div>
   </div>);

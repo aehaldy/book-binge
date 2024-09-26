@@ -7,8 +7,11 @@ import PageContainer from "@/components/page-container";
 import SearchResults from "@/components/search-results";
 import { useRouter } from "next/router";
 import { getSearchResults } from "@/services/openLibraryService";
+import { useIntl } from "react-intl";
+import messages from "./messages";
 
 export default function MainContainer({ children }: PropsWithChildren) {
+  const { formatMessage } = useIntl();
   const { query } = useRouter();
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   
@@ -30,7 +33,7 @@ export default function MainContainer({ children }: PropsWithChildren) {
   }, [fetchSearchResults, query]);
 
   const renderHomePage = () => searchResults?.length
-    ? (<PageContainer title={"Search results"}>
+    ? (<PageContainer title={formatMessage(messages.searchResults)}>
          <SearchResults searchResults={searchResults} />
        </PageContainer>)
     : <LandingPage />;
