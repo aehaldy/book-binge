@@ -5,4 +5,8 @@ export default defineMessages({
     id: "book.binge.bookCard.byAuthor",
     defaultMessage: "by {author}",
   },
+  showMore: {
+    id: "book.binge.bookCard.showMore",
+    defaultMessage: "Show more",
+  },
 });
