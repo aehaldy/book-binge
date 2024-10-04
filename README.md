@@ -18,7 +18,7 @@ And remember, the [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/Ja
 ## Getting Started
 
 ### Set up your dev environment to work on the project:
-Install [Node Version Manager](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) to make your life easier now and in the future.
+Install [Node Version Manager](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) to make your life easier now and in the future (Windows users, use [nvm-windows](https://github.com/coreybutler/nvm-windows)).
 
 Use the required Node version to minimize issues:
 ```bash
