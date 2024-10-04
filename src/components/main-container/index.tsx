@@ -9,12 +9,13 @@ import { useRouter } from "next/router";
 import { getSearchResults } from "@/services/openLibraryService";
 import { useIntl } from "react-intl";
 import messages from "./messages";
+import styles from "./index.module.scss";
 
 export default function MainContainer({ children }: PropsWithChildren) {
   const { formatMessage } = useIntl();
   const { query } = useRouter();
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  
+
   const fetchSearchResults = useCallback(async (query: string) => {
     try {
       const response = await getSearchResults(query);
@@ -34,13 +35,19 @@ export default function MainContainer({ children }: PropsWithChildren) {
 
   const renderHomePage = () => searchResults?.length
     ? (<PageContainer title={formatMessage(messages.searchResults)}>
-         <SearchResults searchResults={searchResults} />
-       </PageContainer>)
+      <SearchResults searchResults={searchResults} />
+    </PageContainer>)
     : <LandingPage />;
 
-  return (<>
-    <Navbar />
-    <SearchBanner />
-    {children ? children : renderHomePage()}
-  </>);
+  return (
+    <>
+      <Navbar />
+      <SearchBanner />
+      <div className={styles.pageRoot}>
+        <div className={styles.pageContents}>
+          {children ? children : renderHomePage()}
+        </div>
+      </div>
+    </>
+  );
 }

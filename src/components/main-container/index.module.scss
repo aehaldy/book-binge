@@ -1,0 +1,11 @@
+.pageRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.625rem;
+
+  .pageContents {
+    width: 100%;
+    max-width: 794px;
+  }
+}
