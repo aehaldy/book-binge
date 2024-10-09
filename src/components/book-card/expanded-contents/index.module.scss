@@ -1,0 +1,40 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 11.25rem 1fr 1fr;
+  gap: 1.25rem;
+  font-size: 1rem;
+  color: var(--prussian-blue);
+  padding: 1.5em;
+  border-top: 1px solid var(--rose-quartz);
+  transition: ease .5s;
+
+  .coverImage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .bibData {
+    line-height: 2rem;
+
+    .readingCount {
+      color: var(--bright-teal);
+      padding-top: .5rem;
+    }
+  }
+
+  .averageRating {
+    justify-self: right;
+    text-align: right;
+    line-height: 2rem;
+  }
+
+  .subjects {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    align-self: flex-end;
+
+    .subjectList {
+      font-size: .875rem;
+    }
+  }
+}

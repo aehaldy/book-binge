@@ -3,6 +3,10 @@ import { ReactNode, useState } from "react";
 import { useIntl } from "react-intl";
 import messages from "./messages";
 import styles from "./index.module.scss";
+import ExpandedContents from "@/components/book-card/expanded-contents";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons/faChevronUp";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 type BookCardProps = {
   book: SearchResult;
@@ -32,14 +36,13 @@ export default function BookCard({ book, buttons, showUserRating = false }: Book
         </div>
         <div className={styles.showMoreButton}>
           <button onClick={toggleCardExpand}>
-            {formatMessage(messages.showMore)}
+            <FontAwesomeIcon className={styles.icon} icon={expanded ? faChevronUp : faChevronDown} />
+            {expanded ? formatMessage(messages.showLess) : formatMessage(messages.showMore)}
           </button>
         </div>
       </div>
       {expanded && (
-        <div>
-          Book stuff
-        </div>
+        <ExpandedContents book={book} />
       )}
     </div>
   )

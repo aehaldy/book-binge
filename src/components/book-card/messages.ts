@@ -9,4 +9,8 @@ export default defineMessages({
     id: "book.binge.bookCard.showMore",
     defaultMessage: "Show more",
   },
+  showLess: {
+    id: "book.binge.bookCard.showMore",
+    defaultMessage: "Show less",
+  },
 });
