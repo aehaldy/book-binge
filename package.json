@@ -6,7 +6,9 @@
     "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "scripts-help": {
     "dev": "Starts a local dev server with file-watcher and live reload. Uses env variables declared in ./.env.development",
@@ -26,15 +28,53 @@
     "sass": "^1.77.6"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/jest": "^29.5.13",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "next-router-mock": "^0.9.13",
     "prettier": "3.3.2",
     "typescript": "^5"
   },
   "prettier": {
     "printWidth": 100
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:jsx-a11y/recommended",
+      "next",
+      "prettier"
+    ],
+    "env": {
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 100,
+          "endOfLine": "auto"
+        }
+      ]
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ]
   }
 }

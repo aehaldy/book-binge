@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import MainContainer from "@/components/main-container";
-import LandingPage from "@/components/landing-page";
+import { IntlProvider } from "react-intl";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <MainContainer />
+        <IntlProvider locale={"en"}>
+          <MainContainer />
+        </IntlProvider>
       </main>
     </>
   );
