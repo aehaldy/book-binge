@@ -8,7 +8,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons/faChevronUp";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-type BookCardProps = {
+export type BookCardProps = {
   book: SearchResult;
   buttons: ReactNode[];
   showUserRating?: boolean;
