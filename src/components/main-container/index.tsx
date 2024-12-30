@@ -10,6 +10,7 @@ import { getSearchResults } from "@/services/openLibraryService";
 import { useIntl } from "react-intl";
 import messages from "./messages";
 import styles from "./index.module.scss";
+import { mockSearchResponse } from "@/services/models/mockSearchResult";
 
 export default function MainContainer({ children }: PropsWithChildren) {
   const { formatMessage } = useIntl();
