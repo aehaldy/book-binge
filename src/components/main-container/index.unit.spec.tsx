@@ -10,7 +10,7 @@ jest.mock("../../services/openLibraryService", () => ({
   getSearchResults: jest.fn(),
 }));
 
-const mockedGetSearchResults = getSearchResults as jest.Mocked<typeof getSearchResults>;
+const mockedGetSearchResults = getSearchResults as jest.Mock;
 
 const renderMainContainer = () => render(
   <MainContainer  />
